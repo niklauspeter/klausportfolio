@@ -3,7 +3,6 @@
  	easing: 'slide',
  	once: false
  });
-
 jQuery(document).ready(function($) {
 
 	"use strict";
