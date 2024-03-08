@@ -897,7 +897,7 @@ p {
   margin: 2rem 0 0;
 }
 
-#jbutton {
+#button {
   background: var(--yellow);
   color: var(--black);
   padding: 1rem 2rem;
@@ -909,7 +909,7 @@ p {
   cursor: pointer;
 }
 
-#jbutton:active {
+#button:active {
   transform: translatey(3px);
 }
 
