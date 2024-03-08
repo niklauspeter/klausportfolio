@@ -19,7 +19,8 @@ document.addEventListener("click", function (event) {
     // let data = {"type":"general","setup":"What do you call a pile of cats?","punchline":" A Meowtain.","id":217};
     fetch("https://official-joke-api.appspot.com/random_joke")
       .then((response) => response.json())
-      .then((data) => renderJoke(data));
+      .then((data) => renderJoke(data))
+      .catch(() => renderError());
     // Log the static data
     // alert(JSON.stringify(data, null, 2));
   });
@@ -30,4 +31,10 @@ document.addEventListener("click", function (event) {
     const punchline = document.getElementById("punchline");
     setup.innerHTML = data.setup;
     punchline.innerHTML = data.punchline;
+  }
+
+  function renderError() {
+    const error = document.getElementById("error");
+    error.innerHTML = "";
+    error.innerHTML = "Whoops, something went wrong. Please try again later!";
   }
