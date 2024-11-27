@@ -1025,3 +1025,23 @@ p {
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
+/* Set a white background for the section */
+.site-blocks-cover {
+  background-color: #ffffff; /* Matches the image's background color */
+  padding: 60px 0; /* Add padding for breathing room */
+}
+
+/* Image styling */
+.img-face {
+  max-width: 100%; /* Ensure the image fits within its column */
+  height: auto;    /* Maintain aspect ratio */
+  border-radius: 50%; /* Optional: for a circular image effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .img-face {
+    max-width: 80%; /* Slightly reduce the image size on smaller screens */
+  }
+}
