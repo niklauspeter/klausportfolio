@@ -898,21 +898,44 @@ p {
 }
 
 #button {
-  background: var(--yellow);
+  background: rgb(239, 239, 239);
   color: var(--black);
   padding: 1rem 2rem;
-  /* padding: 10px 22px; */
   border-radius: 6px;
   font-weight: 300;
   text-transform: uppercase;
-  /* border: none;
-  border-radius: 4px; */
-  transition: 0.1s ease transform;
+  transition: transform 0.1s ease, box-shadow 0.3s ease-in-out;
   cursor: pointer;
+  animation: bounceButton 2s infinite ease-in-out, glowButton 3s infinite ease-in-out;
+  box-shadow: 0 0 10px rgba(255, 223, 0, 0.5);
 }
 
 #button:active {
-  transform: translatey(3px);
+  transform: translateY(3px);
+}
+
+#button:hover {
+  box-shadow: 0 8px 20px rgba(255, 223, 0, 0.6);
+}
+
+/* Bouncing animation */
+@keyframes bounceButton {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Glowing animation */
+@keyframes glowButton {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 223, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 223, 0, 0.8);
+  }
 }
 
 #punchline {
@@ -923,6 +946,7 @@ p {
 #error {
   color: #ee6668;
 }
+
 
 /* Import Google font - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
@@ -941,90 +965,72 @@ p {
   background-color: #f0faff;
 } */
 
+
+
 .button {
   position: relative;
-  /* padding: 10px 22px;
-  border-radius: 6px; */
+  display: inline-block;
+  padding: 12px 30px;
   border: none;
+  border-radius: 8px;
   color: #fff;
+  background: linear-gradient(135deg, #7d2ae8, #5d00a5);
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  background-color: #7d2ae8;
-  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgba(125, 42, 232, 0.5);
+  animation: bounce 2s infinite ease-in-out, glow 3s infinite ease-in-out;
+  overflow: hidden;
 }
-.button:active {
-  transform: scale(0.96);
-}
-.button:before,
-.button:after {
-  position: absolute;
-  content: "";
-  width: 150%;
-  left: 50%;
-  height: 100%;
-  transform: translateX(-50%);
-  z-index: -1000;
-  background-repeat: no-repeat;
-}
-.button::before {
-  top: -70%;
-  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-  radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
 
-  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
-    10% 10%, 18% 18%;
-  background-position: 5% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%,
-  70% 90% ;
-  animation: topBubbles ease-in-out 0.6s forwards infinite;
+.button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease-in-out;
+  transform: skewX(-30deg);
 }
-@keyframes topBubbles {
-  /* 0% {
-    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
-      40% 90%, 55% 90%, 70% 90%;
-  } */
+
+.button:hover:after {
+  left: 100%;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #5d00a5, #7d2ae8);
+  box-shadow: 0 8px 20px rgba(125, 42, 232, 0.4);
+}
+
+.button:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 12px rgba(125, 42, 232, 0.2);
+}
+
+/* Bouncing animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
   50% {
-    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
-      50% 50%, 65% 20%, 90% 30%;
-  }
-  100% {
-    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
-      50% 40%, 65% 10%, 90% 20%;
-    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    transform: translateY(-10px);
   }
 }
-.button::after {
-  bottom: -70%;
-  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
-  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
-  animation: bottomBubbles ease-in-out 0.6s forwards infinite;
-}
-@keyframes bottomBubbles {
-  /* 0% {
-    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
-      70% -10%, 70% 0%;
-  } */
+
+/* Glowing animation */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(125, 42, 232, 0.5);
+  }
   50% {
-    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
-      105% 0%;
-  }
-  100% {
-    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
-      110% 10%;
-    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    box-shadow: 0 0 20px rgba(125, 42, 232, 0.8);
   }
 }
+
 /* Set a white background for the section */
 .site-blocks-cover {
   background-color: #ffffff; /* Matches the image's background color */
@@ -1043,5 +1049,68 @@ p {
 @media (max-width: 768px) {
   .img-face {
     max-width: 80%; /* Slightly reduce the image size on smaller screens */
+  }
+}
+#jokes-section {
+  background-color: #fdfdfd;
+  padding: 3rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.joke-text {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.setup {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.punchline {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f39c11;
+  margin-bottom: 1rem;
+}
+
+.error {
+  font-size: 1rem;
+  color: #ee6668;
+}
+
+.smoothscroll {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.smoothscroll:hover {
+  background-color: #0056b3;
+}
+
+/* Bouncing and Glow Animations for Button */
+@keyframes bounceButton {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glowButton {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 223, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 223, 0, 0.8);
   }
 }
