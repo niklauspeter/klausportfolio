@@ -75,6 +75,7 @@
                 <li><a href="#portfolio-section" class="nav-link">Portfolio</a></li>
                 <li><a href="https://medium.com/@oriokiklaus" class="nav-link" target="_blank" rel="noopener noreferrer">Blog</a></li>
                 <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                <li><a href="https://github.com/niklauspeter" class="nav-link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
               </ul>
             </nav>
 
@@ -200,6 +201,21 @@
 
           <div class="col-md-6 mb-4">
             <div class="service d-flex h-100">
+              <div class="service-number mr-4"><span class="icon-web"></span></div>
+              <div class="service-about">
+                <h3>Website Development</h3>
+                <p>I offer professional website development services with a strong focus on building clean, functional, 
+                  and visually appealing websites using WordPress (and on demand, other platforms such as Wix, Squarespace,
+                  and custom static site setups). Where projects demand more technical depth, I bring the ability to craft custom code, 
+                  integrate webhooks, and connect APIs seamlessly into websites to extend their functionality. Working with Wingucreatives, I’ve perfected the craft, 
+                  designing websites that are not only user-friendly but that are also functional and aligned with each brand’s unique identity.</p>
+                  <p><a href="#portfolio-section" class="btn smoothscroll btn-primary">View Websites</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="service d-flex h-100">
               <div class="service-number mr-4"><span class="icon-layers"></span></div>
               <div class="service-about">
                 <h3>Technical Writing</h3>
@@ -265,68 +281,392 @@
 
 
     <section class="site-section block__62272" id="portfolio-section">
-
-
       <div class="container">
-        <div class="row mb-5">
+        <div class="row mb-3">
           <div class="col-12 position-relative">
-            <h2 class="section-title text-center mb-5">My Portfolio</h2>
-             <p><a href="#about-section" class="section-title text-center mb-5" >Back to About Me</a></p>
+            <h2 class="section-title text-center mb-3">My Portfolio</h2>
+            <p class="text-center mb-4">Explore my diverse range of projects across different technologies and domains</p>
           </div>
         </div>
-    
 
-        <div id="posts" class="row no-gutter">
-          <div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <iframe width="350" height="285" src="https://www.youtube.com/embed/WTic0MyRAmE?si=gKct7yUyX0cF_D0C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe class="item-wrap fancybox">
-              <span class="icon-search2"></span>
-            </a>
-          </div>
-
-        
-          <div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <iframe width="350" height="285" src="https://www.youtube.com/embed/92qOXCdBr7g?si=8Ls_NEFyQIpbPNFv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe class="item-wrap fancybox">
-              <span class="icon-search2"></span>
-            </a>
-          </div>
-          <div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <iframe width="350" height="285" src="https://www.youtube.com/embed/JWyR2XxsxjI?si=aMR7cNyiHtJi4dBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe class="item-wrap fancybox">
-              <span class="icon-search2"></span>
-              
-            </a>
-          </div>
-
-          <div class="item brand col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <iframe width="350" height="285" src="https://www.youtube.com/embed/iAD5C9r9A1A?si=nWb4Nbdln_wo7Vva" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe class="item-wrap fancybox">
-              <span class="icon-search2"></span>
-        
-            </a>
-          </div>
-
-          
-          <!-- OMA Chatbot Section -->
-          <div class="item design col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <a href="https://chenge.pythonanywhere.com/chat" target="_blank" style="position: relative; display: inline-block;">
-              <img class="img-fluid" src="images/post_5.jpg" alt="Chatbot Image">
-              <div class="description-overlay">
-                One Million Avocados(OMA) Chatbot - </br>Ask about Anything Avocado!
+        <!-- Portfolio Filter Navigation -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="portfolio-filter-wrapper text-center">
+              <div class="portfolio-filter" id="portfolio-filters">
+                <a href="#" class="btn smoothscroll btn-primary filter-btn active" data-filter=".fullstack">
+                  <span class="filter-icon">⚡</span>
+                  <span class="filter-text">Full-Stack Apps</span>
+                </a>
+                <a href="#" class="btn smoothscroll btn-primary filter-btn" data-filter=".website">
+                  <span class="filter-icon">🌐</span>
+                  <span class="filter-text">Websites</span>
+                </a>
+                <a href="#" class="btn smoothscroll btn-primary filter-btn" data-filter=".tools">
+                  <span class="filter-icon">🔧</span>
+                  <span class="filter-text">Tools & APIs</span>
+                </a>
+                <a href="#" class="btn smoothscroll btn-primary filter-btn" data-filter="*">
+                  <span class="filter-icon">🎯</span>
+                  <span class="filter-text">All Projects</span>
+                </a>
               </div>
-            </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div id="portfolio-grid" class="row no-gutter">
+          <!-- Full-Stack Projects (YouTube Videos) -->
+          <div class="portfolio-item fullstack col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <div class="portfolio-card">
+              <a href="https://www.youtube.com/watch?v=WTic0MyRAmE" target="_blank">
+                <div class="portfolio-image">
+                  <iframe width="100%" height="285" src="https://www.youtube.com/embed/WTic0MyRAmE?si=gKct7yUyX0cF_D0C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="pointer-events: none;"></iframe>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h4>Full-Stack Application Demo</h4>
+                    <p>Complete web application showcase - Click to watch on YouTube</p>
+                    <span class="portfolio-category">Full-Stack</span>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
 
-          <!-- OMA Investor Revenue Calculator Section -->
-          <div class="item design col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <a href="https://klausorioki.pythonanywhere.com/" target="_blank" style="position: relative; display: inline-block;">
-              <img class="img-fluid" src="images/post_2.jpg" alt="Revenue Calculator Image">
-              <div class="description-overlay">
-                One Million Avocados Investor Revenue Calculator - </br>Estimate your gains investing in OMA!
-              </div>
-            </a>
+          <div class="portfolio-item fullstack col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <div class="portfolio-card">
+              <a href="https://www.youtube.com/watch?v=92qOXCdBr7g" target="_blank">
+                <div class="portfolio-image">
+                  <iframe width="100%" height="285" src="https://www.youtube.com/embed/92qOXCdBr7g?si=8Ls_NEFyQIpbPNFv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="pointer-events: none;"></iframe>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h4>Web Application Demo</h4>
+                    <p>Frontend & Backend integration - Click to watch on YouTube</p>
+                    <span class="portfolio-category">Full-Stack</span>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
 
+          <div class="portfolio-item fullstack col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <div class="portfolio-card">
+              <a href="https://www.youtube.com/watch?v=JWyR2XxsxjI" target="_blank">
+                <div class="portfolio-image">
+                  <iframe width="100%" height="285" src="https://www.youtube.com/embed/JWyR2XxsxjI?si=aMR7cNyiHtJi4dBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="pointer-events: none;"></iframe>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h4>Software Project Demo</h4>
+                    <p>Complete application walkthrough - Click to watch on YouTube</p>
+                    <span class="portfolio-category">Full-Stack</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item fullstack col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <div class="portfolio-card">
+              <a href="https://www.youtube.com/watch?v=iAD5C9r9A1A" target="_blank">
+                <div class="portfolio-image">
+                  <iframe width="100%" height="285" src="https://www.youtube.com/embed/iAD5C9r9A1A?si=nWb4Nbdln_wo7Vva" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="pointer-events: none;"></iframe>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h4>Application Development</h4>
+                    <p>End-to-end development process - Click to watch on YouTube</p>
+                    <span class="portfolio-category">Full-Stack</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Website Projects -->
+          <div class="portfolio-item website col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <div class="portfolio-card">
+              <a href="https://rawft.com/" target="_blank">
+                <div class="portfolio-image">
+                  <iframe src="https://rawft.com/" width="100%" height="285" frameborder="0" style="pointer-events: none;"></iframe>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h4>Rawft Digital Agency</h4>
+                    <p>Digital marketing and web solutions</p>
+                    <span class="portfolio-category">Website</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item website col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <div class="portfolio-card">
+              <a href="https://jijenge254.org/" target="_blank">
+                <div class="portfolio-image">
+                  <iframe src="https://jijenge254.org/" width="100%" height="285" frameborder="0" style="pointer-events: none;"></iframe>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h4>Jijenge 254</h4>
+                    <p>Community empowerment platform</p>
+                    <span class="portfolio-category">Website</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item website col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <div class="portfolio-card">
+              <a href="https://theviandsltd.co.ke/" target="_blank">
+                <div class="portfolio-image">
+                  <iframe src="https://theviandsltd.co.ke/" width="100%" height="285" frameborder="0" style="pointer-events: none;"></iframe>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h4>The Viands Ltd</h4>
+                    <p>Food and catering services</p>
+                    <span class="portfolio-category">Website</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item website col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <div class="portfolio-card">
+              <a href="https://wingusms.com/" target="_blank">
+                <div class="portfolio-image">
+                  <iframe src="https://wingusms.com/" width="100%" height="285" frameborder="0" style="pointer-events: none;"></iframe>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h4>Wingu SMS</h4>
+                    <p>SMS marketing platform</p>
+                    <span class="portfolio-category">Website</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item website col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <div class="portfolio-card">
+              <a href="https://gtriofinance.co.ke/" target="_blank">
+                <div class="portfolio-image">
+                  <iframe src="https://gtriofinance.co.ke/" width="100%" height="285" frameborder="0" style="pointer-events: none;"></iframe>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h4>G-Trio Finance</h4>
+                    <p>Financial services platform</p>
+                    <span class="portfolio-category">Website</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item website col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <div class="portfolio-card">
+              <a href="https://walenisi.co.ke/" target="_blank">
+                <div class="portfolio-image">
+                  <iframe src="https://walenisi.co.ke/" width="100%" height="285" frameborder="0" style="pointer-events: none;"></iframe>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h4>Walenisi</h4>
+                    <p>Digital solutions provider</p>
+                    <span class="portfolio-category">Website</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item website col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <div class="portfolio-card">
+              <a href="https://tastetrailsandtours.com/" target="_blank">
+                <div class="portfolio-image">
+                  <iframe src="https://tastetrailsandtours.com/" width="100%" height="285" frameborder="0" style="pointer-events: none;"></iframe>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h4>Taste Trails & Tours</h4>
+                    <p>Culinary tourism and travel experiences</p>
+                    <span class="portfolio-category">Website</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item website col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <div class="portfolio-card">
+              <a href="https://mtcircular.co.ke/" target="_blank">
+                <div class="portfolio-image">
+                  <iframe src="https://mtcircular.co.ke/" width="100%" height="285" frameborder="0" style="pointer-events: none;"></iframe>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h4>MT Circular</h4>
+                    <p>Business solutions and services</p>
+                    <span class="portfolio-category">Website</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item website col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <div class="portfolio-card">
+              <a href="https://ruganoswildadventures.co.ke/" target="_blank">
+                <div class="portfolio-image">
+                  <iframe src="https://ruganoswildadventures.co.ke/" width="100%" height="285" frameborder="0" style="pointer-events: none;"></iframe>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h4>Ruganos Wild Adventures</h4>
+                    <p>Safari and adventure tourism</p>
+                    <span class="portfolio-category">Website</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item website col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <div class="portfolio-card">
+              <a href="https://christriptoursandsafaris.com/" target="_blank">
+                <div class="portfolio-image">
+                  <iframe src="https://christriptoursandsafaris.com/" width="100%" height="285" frameborder="0" style="pointer-events: none;"></iframe>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h4>Christrip Tours & Safaris</h4>
+                    <p>Tour and safari experiences</p>
+                    <span class="portfolio-category">Website</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item website col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <div class="portfolio-card">
+              <a href="https://christripvisasandtravels.co.ke/" target="_blank">
+                <div class="portfolio-image">
+                  <iframe src="https://christripvisasandtravels.co.ke/" width="100%" height="285" frameborder="0" style="pointer-events: none;"></iframe>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h4>Christrip Visas & Travels</h4>
+                    <p>Visa processing and travel services</p>
+                    <span class="portfolio-category">Website</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item website col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <div class="portfolio-card">
+              <a href="https://heratherapy.co.ke/" target="_blank">
+                <div class="portfolio-image">
+                  <iframe src="https://heratherapy.co.ke/" width="100%" height="285" frameborder="0" style="pointer-events: none;"></iframe>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h4>Hera Therapy</h4>
+                    <p>Professional therapy and wellness services</p>
+                    <span class="portfolio-category">Website</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item website col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <div class="portfolio-card">
+              <a href="https://gotellworldexposures.com/" target="_blank">
+                <div class="portfolio-image">
+                  <iframe src="https://gotellworldexposures.com/" width="100%" height="285" frameborder="0" style="pointer-events: none;"></iframe>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h4>Gotell World Exposures</h4>
+                    <p>Media and content creation services</p>
+                    <span class="portfolio-category">Website</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item website col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <div class="portfolio-card">
+              <a href="https://smartcryptotips.com/" target="_blank">
+                <div class="portfolio-image">
+                  <iframe src="https://smartcryptotips.com/" width="100%" height="285" frameborder="0" style="pointer-events: none;"></iframe>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h4>Smart Crypto Tips</h4>
+                    <p>Cryptocurrency education and insights</p>
+                    <span class="portfolio-category">Website</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Tools & APIs (Original OMA Projects) -->
+          <div class="portfolio-item tools col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <div class="portfolio-card">
+              <a href="https://chenge.pythonanywhere.com/chat" target="_blank">
+                <div class="portfolio-image">
+                  <img class="img-fluid" src="images/post_5.jpg" alt="OMA Chatbot">
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h4>OMA Chatbot</h4>
+                    <p>One Million Avocados Chatbot - Ask about Anything Avocado!</p>
+                    <span class="portfolio-category">AI Tool</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-item tools col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <div class="portfolio-card">
+              <a href="https://klausorioki.pythonanywhere.com/" target="_blank">
+                <div class="portfolio-image">
+                  <img class="img-fluid" src="images/post_2.jpg" alt="Revenue Calculator">
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="portfolio-content">
+                    <h4>Revenue Calculator</h4>
+                    <p>One Million Avocados Investor Revenue Calculator - Estimate your gains investing in OMA!</p>
+                    <span class="portfolio-category">Financial Tool</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <p><a href="#about-section" class="btn btn-outline-primary">Back to About Me</a></p>
+          </div>
         </div>
       </div>
-
     </section>
 
 

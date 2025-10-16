@@ -1050,6 +1050,25 @@ p {
   .img-face {
     max-width: 80%; /* Slightly reduce the image size on smaller screens */
   }
+  
+  /* Portfolio Filter Responsive Styles */
+  .portfolio-filter {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  .filter-btn {
+    width: 90%;
+    max-width: 280px;
+    justify-content: center;
+    margin: 0.2rem 0;
+  }
+  
+  .portfolio-image {
+    height: 200px !important;
+  }
 }
 #jokes-section {
   background-color: #fdfdfd;
@@ -1141,4 +1160,192 @@ img.img-fluid {
 
 a:hover img.img-fluid {
   transform: scale(1.05);
+}
+
+/* Portfolio Filter Styles */
+.portfolio-filter-wrapper {
+  margin-bottom: 2rem;
+}
+
+.portfolio-filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.25rem;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  text-decoration: none !important;
+}
+
+.filter-btn.active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(32, 117, 97, 0.3);
+}
+
+.filter-icon {
+  font-size: 1.1rem;
+}
+
+.filter-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Portfolio Card Styles */
+.portfolio-item {
+  margin-bottom: 2rem;
+}
+
+.portfolio-card {
+  position: relative;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-image iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.portfolio-card:hover .portfolio-image img {
+  transform: scale(1.05);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(32, 117, 97, 0.9) 0%, rgba(23, 162, 184, 0.9) 100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-content {
+  color: #fff;
+  padding: 2rem;
+}
+
+.portfolio-content h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.portfolio-content p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.portfolio-category {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+}
+
+/* Portfolio Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Remove animation class before re-applying */
+.portfolio-item {
+  animation: none;
+}
+
+/* Portfolio Loading State */
+.portfolio-item.isotope-item {
+  transition: all 0.6s ease;
+}
+
+.portfolio-item.isotope-hidden {
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.001);
+}
+
+/* Enhanced Filter Button States */
+.filter-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.filter-btn:hover::before {
+  left: 100%;
 }

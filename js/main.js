@@ -1,4 +1,4 @@
- AOS.init({
+AOS.init({
  	duration: 800,
  	easing: 'slide',
  	once: false
@@ -243,28 +243,45 @@ jQuery(document).ready(function($) {
 
 
   var siteIstotope = function() {
-  	/* activate jquery isotope */
-	  var $container = $('#posts').isotope({
-	    itemSelector : '.item',
-	    isFitWidth: true
-	  });
+      /* activate jquery isotope */
+      var $container = $('#portfolio-grid').isotope({
+        itemSelector : '.portfolio-item',
+        layoutMode: 'fitRows',
+        transitionDuration: '0.6s'
+      });
 
-	  $(window).resize(function(){
-	    $container.isotope({
-	      columnWidth: '.col-sm-3'
-	    });
-	  });
-	  
-	  $container.isotope({ filter: '*' });
+      $(window).resize(function(){
+        $container.isotope({
+          columnWidth: '.portfolio-item'
+        });
+      });
+      
+      // Initialize with Full-Stack Apps filter instead of all projects
+      $container.isotope({ filter: '.fullstack' });
 
-	    // filter items on button click
-	  $('#filters').on( 'click', 'button', function(e) {
-	  	e.preventDefault();
-	    var filterValue = $(this).attr('data-filter');
-	    $container.isotope({ filter: filterValue });
-	    $('#filters button').removeClass('active');
-	    $(this).addClass('active');
-	  });
+        // filter items on anchor/button click
+      $('#portfolio-filters').on( 'click', 'a, button', function(e) {
+      	e.preventDefault();
+        var filterValue = $(this).attr('data-filter');
+        console.log('Filter clicked:', filterValue); // Debug log
+        
+        // Remove previous animations
+        $('.portfolio-item').removeClass('fade-in-up');
+        
+        $container.isotope({ filter: filterValue });
+        $('#portfolio-filters a, #portfolio-filters button').removeClass('active');
+        $(this).addClass('active');
+        
+        // Add smooth animation effect after filtering is complete
+        $container.one('arrangeComplete', function() {
+          $('.portfolio-item:visible').each(function(index) {
+            var $item = $(this);
+            setTimeout(function() {
+              $item.addClass('fade-in-up');
+            }, index * 100);
+          });
+        });
+      });
   }
 
   siteIstotope();
